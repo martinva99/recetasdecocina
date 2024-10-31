@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enchiladas Verdes</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    let texto = 1;
+
+    function siguientePaso() {
+      const textElement = document.getElementById("pasos");
+      if (texto === 1) {
+        textElement.innerHTML = "<li><strong>Preparar la salsa:</strong> Cocina los tomatillos y los chiles en agua hirviendo durante unos 5 minutos. Una vez cocidos, lícualos junto con la cebolla, el ajo y un poco de sal hasta obtener una salsa homogénea.</li>\n" +
+          "  <li><strong>Freír las tortillas:</strong> Calienta un poco de aceite en una sartén. Pasa rápidamente las tortillas por el aceite caliente para suavizarlas sin que se doren demasiado. Resérvalas.</li>";
+        texto = 2;
+      } else if (texto === 2) {
+        textElement.innerHTML = "  <li><strong>Preparar la salsa:</strong> Cocina los tomatillos y los chiles en agua hirviendo durante unos 5 minutos. Una vez cocidos, lícualos junto con la cebolla, el ajo y un poco de sal hasta obtener una salsa homogénea.</li>\n" +
+          "  <li><strong>Freír las tortillas:</strong> Calienta un poco de aceite en una sartén. Pasa rápidamente las tortillas por el aceite caliente para suavizarlas sin que se doren demasiado. Resérvalas.</li>\n" +
+          "  <li><strong>Ensamblar las enchiladas:</strong> Rellena cada tortilla con el pollo desmenuzado y enrolla. Coloca las enchiladas en un plato grande.</li>";
+        texto = 3;
+      } else if (texto === 3) {
+        textElement.innerHTML = "<li><strong>Preparar la salsa:</strong> Cocina los tomatillos y los chiles en agua hirviendo durante unos 5 minutos. Una vez cocidos, lícualos junto con la cebolla, el ajo y un poco de sal hasta obtener una salsa homogénea.</li>\n" +
+          "  <li><strong>Freír las tortillas:</strong> Calienta un poco de aceite en una sartén. Pasa rápidamente las tortillas por el aceite caliente para suavizarlas sin que se doren demasiado. Resérvalas.</li>\n" +
+          "  <li><strong>Ensamblar las enchiladas:</strong> Rellena cada tortilla con el pollo desmenuzado y enrolla. Coloca las enchiladas en un plato grande.</li>\n" +
+          "  <li><strong>Servir:</strong> Cubre las enchiladas con la salsa verde caliente, añade crema y queso fresco por encima. Sirve acompañadas de frijoles refritos o arroz. \n" +
+          "<strong>¡Listo para disfrutar!</strong></li>";
+        texto = 4;
+      }
+    }
+
+    function ultimoPaso() {
+      const textElement = document.getElementById("div");
+      if (texto === 4) {
+        textElement.remove(".butPaso");
+      }
+    }
+
+    function ultimoPaso2() {
+      const imgElement = document.getElementById("imagen1")
+      if (texto === 4) {
+        imgElement.height = "800";
+        imgElement.width = "800";
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-image: url("img/Fondo utensilios.jpg");
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="font-size:300%;background-color:hsl(300, 76%, 88%);text-align: center; border: solid black 10px;
+font-family: Oswald,fantasy; padding:50px; margin: 50px 400px 0 400px; color:black; border-radius: 50px">
+  <strong>Enchiladas Verdes</strong></h1>
+<div style="padding: 10px; float: right; text-align: right; margin: 50px 250px 0px 0px">
+  <img alt="Ingredientes"
+       src="img/ingredientes.jpg"
+       width="734.4" height="489.6"></div>
+<p style="margin: 50px 1650px 0 50px">
+  Ingredientes:
+</p>
+<ul style="text-align: left">
+  <li>12 tortillas de maíz</li>
+  <li>500 g de pechuga de pollo cocida y desmenuzada</li>
+  <li>400 g de tomatillo</li>
+  <li>2 chiles serranos</li>
+  <li>1 diente de ajo</li>
+  <li>½ cebolla</li>
+  <li>200 g de crema</li>
+  <li>200 g de queso fresco desmenuzado</li>
+  <li>Aceite vegetal</li>
+  <li>Sal</li>
+</ul>
+<p style="margin: 50px 1650px 0 50px">
+  Preparación:
+</p>
+<ol id="pasos">
+  <li><strong>Preparar la salsa:</strong> Cocina los tomatillos y los chiles en agua hirviendo durante unos 5 minutos. Una vez cocidos, lícualos junto con la cebolla, el ajo y un poco de sal hasta obtener una salsa homogénea.
+  </li>
+</ol>
+
+<div style="text-align: center; margin: 50px 790px 50px 790px;
+padding: 0 0 10px 0;" id="div">
+  <button onclick="siguientePaso(); ultimoPaso(); ultimoPaso2()" class="butPaso">SIGUIENTE PASO</button>
+</div>
+<div style="text-align: center; margin: 50px 790px 50px 550px;
+padding: 0 0 10px 0;">
+  <img src="img/enchiladas.jpg"
+       alt="Enchiladas Verdes"
+       style="border-radius: 400px"
+       height="0"
+       width="0"
+       id="imagen1">
+</div>
+<div style="text-align: left; margin: 50px; padding: 10px">
+  <button onclick="document.location='index.html'" class="butSiguiente">VOLVER</button>
+</div>
+<hr>
+<p style="margin: 50px 1275px 50px 50px">Creador de la página web: Martín Veiga Álvarez</p>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paella Valenciana</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    let texto = 1;
+
+    function siguientePaso() {
+      const textElement = document.getElementById("pasos");
+      if (texto === 1) {
+        textElement.innerHTML = "<li><strong>Preparar el sofrito:</strong> En una paellera amplia, calienta aceite de oliva y dora los trozos de pollo y conejo\n" +
+          "    hasta que estén dorados por todos lados. Retíralos y resérvalos.</li>\n" +
+          "  <li><strong>Cocinar las verduras:</strong> En el mismo aceite, añade las judías verdes y sofríelas hasta que estén tiernas.\n" +
+          "    Añade el pimiento cortado en tiras, los ajos picados y el tomate rallado.\n" +
+          "    Cocina todo junto hasta que el tomate se haya reducido.</li>";
+        texto = 2;
+      } else if (texto === 2) {
+        textElement.innerHTML = "  <li><strong>Preparar el sofrito:</strong> En una paellera amplia, calienta aceite de oliva y dora los trozos de pollo y conejo\n" +
+          "    hasta que estén dorados por todos lados. Retíralos y resérvalos.</li>\n" +
+          "  <li><strong>Cocinar las verduras:</strong> En el mismo aceite, añade las judías verdes y sofríelas hasta que estén tiernas.\n" +
+          "    Añade el pimiento cortado en tiras, los ajos picados y el tomate rallado.\n" +
+          "    Cocina todo junto hasta que el tomate se haya reducido.</li>\n" +
+          "  <li><strong>Incorporar el arroz:</strong> Añade el arroz a la paellera y mézclalo con el sofrito.\n" +
+          "    A continuación, vuelve a incorporar la carne reservada.</li>";
+        texto = 3;
+      } else if (texto === 3) {
+        textElement.innerHTML = "<li><strong>Preparar el sofrito:</strong> En una paellera amplia, calienta aceite de oliva y dora los trozos de pollo y conejo\n" +
+          "    hasta que estén dorados por todos lados. Retíralos y resérvalos.</li>\n" +
+          "  <li><strong>Cocinar las verduras:</strong> En el mismo aceite, añade las judías verdes y sofríelas hasta que estén tiernas.\n" +
+          "    Añade el pimiento cortado en tiras, los ajos picados y el tomate rallado.\n" +
+          "    Cocina todo junto hasta que el tomate se haya reducido.</li>\n" +
+          "  <li><strong>Incorporar el arroz:</strong> Añade el arroz a la paellera y mézclalo con el sofrito.\n" +
+          "    A continuación, vuelve a incorporar la carne reservada.</li>\n" +
+          "  <li><strong>Añadir el caldo:</strong> Vierte el caldo caliente, asegurándote de que cubre todos los ingredientes.\n" +
+          "    Añade el garrofón y el azafrán. Cocina a fuego medio durante 20 minutos sin remover,\n" +
+          "    dejando que el arroz absorba todo el caldo.</li>";
+        texto = 4;
+      } else if (texto === 4) {
+        textElement.innerHTML = "<li><strong>Preparar el sofrito:</strong> En una paellera amplia, calienta aceite de oliva y dora los trozos de pollo y conejo\n" +
+          "    hasta que estén dorados por todos lados. Retíralos y resérvalos.</li>\n" +
+          "  <li><strong>Cocinar las verduras:</strong> En el mismo aceite, añade las judías verdes y sofríelas hasta que estén tiernas.\n" +
+          "    Añade el pimiento cortado en tiras, los ajos picados y el tomate rallado.\n" +
+          "    Cocina todo junto hasta que el tomate se haya reducido.</li>\n" +
+          "  <li><strong>Incorporar el arroz:</strong> Añade el arroz a la paellera y mézclalo con el sofrito.\n" +
+          "    A continuación, vuelve a incorporar la carne reservada.</li>\n" +
+          "  <li><strong>Añadir el caldo:</strong> Vierte el caldo caliente, asegurándote de que cubre todos los ingredientes.\n" +
+          "    Añade el garrofón y el azafrán. Cocina a fuego medio durante 20 minutos sin remover,\n" +
+          "    dejando que el arroz absorba todo el caldo.</li>\n" +
+          "  <li><strong>Reposar y servir:</strong> Una vez cocido el arroz,\n" +
+          "    retira del fuego y deja reposar unos minutos antes de servir.\n" +
+          "    <strong>¡Listo para disfrutar!</strong></li>"
+        texto = 5;
+      }
+    }
+
+    function ultimoPaso() {
+      const textElement = document.getElementById("div");
+      if (texto === 5) {
+        textElement.remove(".butPaso");
+      }
+    }
+
+    function ultimoPaso2() {
+      const imgElement = document.getElementById("imagen1")
+      if (texto === 5) {
+        imgElement.height = "600";
+        imgElement.width = "800";
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-image: url("img/Fondo utensilios.jpg");
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="font-size:300%;background-color:hsl(300, 76%, 88%);text-align: center; border: solid black 10px;
+font-family: Oswald,fantasy; padding:50px; margin: 50px 400px 0 400px; color:black; border-radius: 50px">
+  <strong>Paella Valenciana</strong></h1>
+<div style="padding: 10px; float: right; text-align: right; margin: 50px 250px 0px 0px">
+  <img alt="Ingredientes"
+       src="img/ingredientes.jpg"
+       width="734.4" height="489.6"></div>
+<p style="margin: 50px 1650px 0 50px">
+  Ingredientes:
+</p>
+<ul>
+  <li>400 g de arroz</li>
+  <li>800 ml de caldo de pollo o pescado</li>
+  <li>200 g de conejo troceado</li>
+  <li>200 g de pollo troceado</li>
+  <li>150 g de judía verde (ferraura)</li>
+  <li>100 g de garrofón</li>
+  <li>2 tomates maduros</li>
+  <li>1 pimiento rojo</li>
+  <li>2 dientes de ajo</li>
+  <li>Aceite de oliva</li>
+  <li>Azafrán o colorante</li>
+  <li>Sal y pimienta</li>
+</ul>
+<p style="margin: 50px 1650px 0 50px">
+  Preparación:
+</p>
+<ol id="pasos">
+  <li><strong>Preparar el sofrito:</strong> En una paellera amplia, calienta aceite de oliva y dora los trozos de pollo y conejo
+    hasta que estén dorados por todos lados. Retíralos y resérvalos.
+  </li>
+</ol>
+
+<div style="text-align: center; margin: 50px 790px 50px 790px;
+padding: 0 0 10px 0;" id="div">
+  <button onclick="siguientePaso(); ultimoPaso(); ultimoPaso2()" class="butPaso">SIGUIENTE PASO</button>
+</div>
+<div style="text-align: center; margin: 50px 790px 50px 550px;
+padding: 0 0 10px 0;">
+  <img src="img/paella.jpg"
+       alt="Paella valenciana"
+       style="border-radius: 400px"
+       height="0"
+       width="0"
+       id="imagen1">
+</div>
+<div style="text-align: left; margin: 50px; padding: 10px">
+  <button onclick="document.location='index.html'" class="butSiguiente">VOLVER</button>
+</div>
+<hr>
+<p style="margin: 50px 1275px 50px 50px">Creador de la página web: Martín Veiga Álvarez</p>
+</body>
+</html>

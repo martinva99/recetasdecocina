@@ -1,0 +1,63 @@
+img {
+  border-radius: 100px 0 100px 0;
+  border: solid cyan 5px;
+}
+
+body {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 25px;
+  color: black;
+}
+
+p {
+  text-align: justify;
+  margin: 50px;
+  padding: 10px;
+  background-color: hsl(300, 76%, 88%);
+  border: solid black 5px
+}
+
+ul {
+  text-align: justify;
+  margin: 10px 1372px 10px 50px;
+  padding: 30px;
+  background-color: hsl(300, 76%, 88%);
+  border: solid black 5px
+}
+
+ol {
+  text-align: justify;
+  margin: 10px 50px 10px 50px;
+  padding: 35px;
+  background-color: hsl(300, 76%, 88%);
+  border: solid black 5px
+}
+
+button {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  color: black;
+}
+
+button {
+  background-color: hsl(300, 76%, 88%);
+  border-radius: 10px;
+  border: solid cyan 3px;
+  height: 75px;
+  width: 300px;
+  font-size: 30px;
+}
+
+#imagen:hover {
+  transform: scale(1.05);
+}
+
+.butSiguiente:hover {
+  transform: scale(1.1);
+}
+
+.butPaso:hover {
+  transform: scale(1.1);
+}
+
+

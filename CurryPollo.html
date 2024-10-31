@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Curry de Pollo con Arroz Basmati</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    let texto = 1;
+
+    function siguientePaso() {
+      const textElement = document.getElementById("pasos");
+      if (texto === 1) {
+        textElement.innerHTML = "<li><strong>Preparar los ingredientes:</strong> Pica finamente la cebolla, el ajo y el jengibre. Corta el pollo en cubos medianos.</li>\n" +
+          "  <li><strong>Sofreír el pollo:</strong> En una sartén grande, calienta aceite y sofríe el pollo hasta que esté dorado. Retíralo y resérvalo.</li>";
+        texto = 2;
+      } else if (texto === 2) {
+        textElement.innerHTML = "  <li><strong>Preparar los ingredientes:</strong> Pica finamente la cebolla, el ajo y el jengibre. Corta el pollo en cubos medianos.</li>\n" +
+          "  <li><strong>Sofreír el pollo:</strong> En una sartén grande, calienta aceite y sofríe el pollo hasta que esté dorado. Retíralo y resérvalo.</li>\n" +
+          "  <li><strong>Hacer la salsa:</strong> En la misma sartén, añade la cebolla, el ajo y el jengibre. Cocina hasta que estén dorados. Añade el curry en polvo y mezcla bien. Incorpora la leche de coco y cocina a fuego lento durante 10 minutos.</li>";
+        texto = 3;
+      } else if (texto === 3) {
+        textElement.innerHTML = "<li><strong>Preparar los ingredientes:</strong> Pica finamente la cebolla, el ajo y el jengibre. Corta el pollo en cubos medianos.</li>\n" +
+          "  <li><strong>Sofreír el pollo:</strong> En una sartén grande, calienta aceite y sofríe el pollo hasta que esté dorado. Retíralo y resérvalo.</li>\n" +
+          "  <li><strong>Hacer la salsa:</strong> En la misma sartén, añade la cebolla, el ajo y el jengibre. Cocina hasta que estén dorados. Añade el curry en polvo y mezcla bien. Incorpora la leche de coco y cocina a fuego lento durante 10 minutos.</li>\n" +
+          "  <li><strong>Cocinar el arroz:</strong> Mientras tanto, hierve el arroz basmati en agua con sal siguiendo las instrucciones del paquete.</li>";
+        texto = 4;
+      } else if (texto === 4) {
+        textElement.innerHTML = "<li><strong>Preparar los ingredientes:</strong> Pica finamente la cebolla, el ajo y el jengibre. Corta el pollo en cubos medianos.</li>\n" +
+          "  <li><strong>Sofreír el pollo:</strong> En una sartén grande, calienta aceite y sofríe el pollo hasta que esté dorado. Retíralo y resérvalo.</li>\n" +
+          "  <li><strong>Hacer la salsa:</strong> En la misma sartén, añade la cebolla, el ajo y el jengibre. Cocina hasta que estén dorados. Añade el curry en polvo y mezcla bien. Incorpora la leche de coco y cocina a fuego lento durante 10 minutos.</li>\n" +
+          "  <li><strong>Cocinar el arroz:</strong> Mientras tanto, hierve el arroz basmati en agua con sal siguiendo las instrucciones del paquete.</li>\n" +
+          "  <li><strong>Finalizar el curry:</strong> Añade el pollo dorado a la salsa de curry y cocina todo junto unos 10 minutos más. Sirve el curry de pollo sobre el arroz basmati.\n" +
+          " <strong>¡Listo para disfrutar!</strong></li>"
+        texto = 5;
+      }
+    }
+
+    function ultimoPaso() {
+      const textElement = document.getElementById("div");
+      if (texto === 5) {
+        textElement.remove(".butPaso");
+      }
+    }
+
+    function ultimoPaso2() {
+      const imgElement = document.getElementById("imagen1")
+      if (texto === 5) {
+        imgElement.height = "800";
+        imgElement.width = "800";
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-image: url("img/Fondo utensilios.jpg");
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="font-size:300%;background-color:hsl(300, 76%, 88%);text-align: center; border: solid black 10px;
+font-family: Oswald,fantasy; padding:50px; margin: 50px 400px 0 400px; color:black; border-radius: 50px">
+  <strong>Curry de Pollo con Arroz Basmati</strong></h1>
+<div style="padding: 10px; float: right; text-align: right; margin: 50px 250px 0px 0px">
+  <img alt="Ingredientes"
+       src="img/ingredientes.jpg"
+       width="734.4" height="489.6"></div>
+<p style="margin: 50px 1650px 0 50px">
+  Ingredientes:
+</p>
+<ul>
+  <li>500 g de pechuga de pollo</li>
+  <li>1 cebolla grande</li>
+  <li>2 dientes de ajo</li>
+  <li>1 trozo de jengibre fresco (2 cm)</li>
+  <li>2 cucharadas de curry en polvo</li>
+  <li>400 ml de leche de coco</li>
+  <li>300 g de arroz basmati</li>
+  <li>Aceite vegetal</li>
+  <li>Sal y pimienta</li>
+</ul>
+<p style="margin: 200px 1650px 0 50px">
+  Preparación:
+</p>
+<ol id="pasos">
+  <li><strong>Preparar los ingredientes:</strong> Pica finamente la cebolla, el ajo y el jengibre. Corta el pollo en cubos medianos.
+  </li>
+</ol>
+
+<div style="text-align: center; margin: 50px 790px 50px 790px;
+padding: 0 0 10px 0;" id="div">
+  <button onclick="siguientePaso(); ultimoPaso(); ultimoPaso2()" class="butPaso">SIGUIENTE PASO</button>
+</div>
+<div style="text-align: center; margin: 50px 790px 50px 550px;
+padding: 0 0 10px 0;">
+  <img src="img/curry.jpg"
+       alt="Curry de Pollo con Arroz Basmati"
+       style="border-radius: 400px"
+       height="0"
+       width="0"
+       id="imagen1">
+</div>
+<div style="text-align: left; margin: 50px; padding: 10px">
+  <button onclick="document.location='index.html'" class="butSiguiente">VOLVER</button>
+</div>
+<hr>
+<p style="margin: 50px 1275px 50px 50px">Creador de la página web: Martín Veiga Álvarez</p>
+</body>
+</html>

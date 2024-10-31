@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recetas de cocina</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    let imagen = 1;
+
+    function siguienteReceta() {
+      const imgElement = document.getElementById("imagen");
+      if (imagen === 1) {
+        imgElement.src = "img/enchiladas.jpg";
+        imgElement.alt = "Enchiladas Verdes";
+        imagen = 2;
+      } else if (imagen === 2) {
+        imgElement.src = "img/curry.jpg";
+        imgElement.alt = "Curry de Pollo con Arroz Basmati";
+        imagen = 3;
+      } else if (imagen === 3) {
+        imgElement.src = "img/sopa.jpg";
+        imgElement.alt = "Sopa de Ajo";
+        imagen = 4;
+      } else if (imagen === 4) {
+        imgElement.src = "img/tiramisú.jpg";
+        imgElement.alt = "Tiramisú Clásico";
+        imagen = 5;
+      } else if (imagen === 5) {
+        imgElement.src = "img/paella.jpg";
+        imgElement.alt = "Paella Valenciana";
+        imagen = 1;
+      }
+    }
+
+    function anteriorReceta() {
+      const imgElement = document.getElementById("imagen");
+      if (imagen === 1) {
+        imgElement.src = "img/tiramisú.jpg";
+        imgElement.alt = "Tiramisú Clásico";
+        imagen = 5;
+      } else if (imagen === 2) {
+        imgElement.src = "img/paella.jpg";
+        imgElement.alt = "Paella Valenciana";
+        imagen = 1;
+      } else if (imagen === 3) {
+        imgElement.src = "img/enchiladas.jpg";
+        imgElement.alt = "Enchiladas Verdes";
+        imagen = 2;
+      } else if (imagen === 4) {
+        imgElement.src = "img/curry.jpg";
+        imgElement.alt = "Curry de Pollo con Arroz Basmati";
+        imagen = 3;
+      } else if (imagen === 5) {
+        imgElement.src = "img/sopa.jpg";
+        imgElement.alt = "Sopa de Ajo";
+        imagen = 4;
+      }
+    }
+
+    let texto = 1;
+
+    function siguienteTexto() {
+      const textElement = document.getElementById("descripcion");
+      if (texto === 1) {
+        textElement.innerHTML = "<ins><strong>Enchiladas Verdes</strong></ins>\n" +
+          "<br>\n" +
+          "Una receta latina basada en tortillas de maíz rellenas de pollo con una salsa verde riquísima." +
+          " Muy recomendada si tienes ganas de un plato sabroso.";
+        texto = 2;
+      } else if (texto === 2) {
+        textElement.innerHTML = "<ins><strong>Curry de Pollo con Arroz Basmati</strong></ins>\n" +
+          "<br>\n" +
+          "Receta de origen oriental compuesta, como su nombre indica, de arroz y pollo con salsa de curry. " +
+          "Si te apetece comida india, este es tu plato.";
+        texto = 3;
+      } else if (texto === 3) {
+        textElement.innerHTML = "<ins><strong>Sopa de Ajo</strong></ins>\n" +
+          "<br>\n" +
+          "Una receta muy tradicional, simple, económica y reconfortante. Perfecta para los días fríos de invierno.";
+        texto = 4;
+      } else if (texto === 4) {
+        textElement.innerHTML = "<ins><strong>Tiramisú clásico</strong></ins>\n" +
+          "<br>\n" +
+          "Un postre prefecto para terminar cualquier comida. Dulce, pero con el ligero toque amargo del " +
+          "café. Con este tiramisú, triunfarás se lo sirvas a quien se lo sirvas.";
+        texto = 5;
+      } else if (texto === 5) {
+        textElement.innerHTML = "<ins><strong>Paella Valenciana</strong></ins>\n" +
+          "<br>\n" +
+          "Receta clásica de Paella Valenciana. Fruto de gran controversia por los ingredientes que debe o no debe " +
+          "llevar, aquí tienes una versión fiel a la tradición de Valencia.";
+        texto = 1;
+      }
+    }
+
+    function anteriorTexto() {
+      const textElement = document.getElementById("descripcion");
+      if (texto === 1) {
+        textElement.innerHTML = "<ins><strong>Tiramisú clásico</strong></ins>\n" +
+          "<br>\n" +
+          "Un postre prefecto para terminar cualquier comida. Dulce, pero con el ligero toque amargo del " +
+          "café. Con este tiramisú, triunfarás se lo sirvas a quien se lo sirvas.";
+        texto = 5;
+      } else if (texto === 2) {
+        textElement.innerHTML = "<ins><strong>Paella Valenciana</strong></ins>\n" +
+          "<br>\n" +
+          "Receta clásica de Paella Valenciana. Fruto de gran controversia por los ingredientes que debe o no debe " +
+        "llevar, aquí tienes una versión fiel a la tradición de Valencia.";
+        texto = 1;
+      } else if (texto === 3) {
+        textElement.innerHTML = "<ins><strong>Enchiladas Verdes</strong></ins>\n" +
+          "<br>\n" +
+          "Una receta latina basada en tortillas de maíz rellenas de pollo con una salsa verde riquísima." +
+          " Muy recomendada si tienes ganas de un plato sabroso.";
+        texto = 2;
+      } else if (texto === 4) {
+        textElement.innerHTML = "<ins><strong>Curry de Pollo con Arroz Basmati</strong></ins>\n" +
+          "<br>\n" +
+          "Receta de origen oriental compuesta, como su nombre indica, de arroz y pollo con salsa de curry. " +
+          "Si te apetece comida india, este es tu plato.";
+        texto = 3;
+      } else if (texto === 5) {
+        textElement.innerHTML = "<ins><strong>Sopa de Ajo</strong></ins>\n" +
+          "<br>\n" +
+          "Una receta muy tradicional, simple, económica y reconfortante. Perfecta para los días fríos de invierno.";
+        texto = 4;
+      }
+    }
+    function siguienteEnlace() {
+      const aElement = document.getElementById("enlace");
+      if (imagen === 1) {
+        aElement.href="PaellaValenciana.html";
+      } else if (imagen === 2) {
+        aElement.href="EnchiladasVerdes.html";
+      } else if (imagen === 3) {
+        aElement.href="CurryPollo.html"
+      } else if (imagen === 4) {
+        aElement.href="SopaAjo.html"
+      } else if (imagen === 5) {
+        aElement.href="TiramisuClasico.html"
+      }
+    }
+    function anteriorEnlace() {
+      const aElement = document.getElementById("enlace");
+      if (imagen === 1) {
+        aElement.href="PaellaValenciana.html";
+      } else if (imagen === 2) {
+        aElement.href="EnchiladasVerdes.html"
+      } else if (imagen === 3) {
+        aElement.href="CurryPollo.html";
+      } else if (imagen === 4) {
+        aElement.href="SopaAjo.html";
+      } else if (imagen === 5) {
+        aElement.href="TiramisuClasico.html"
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-image: url("img/Fondo utensilios.jpg");
+    }
+  </style>
+</head>
+<body>
+<h1 style="font-size:300%;background-color:hsl(300, 76%, 88%);text-align: center; border: solid black 10px;
+font-family: Oswald,fantasy; padding:50px; margin: 50px 400px 0 400px; color:black; border-radius: 50px">
+  <strong>Recetas de cocina</strong></h1>
+<p>
+  En esta página podrás encontrar 5 estupendas recetas para cocinar. En cada receta están detallados los ingredientes
+  y cantidades necesarias para su elaboración, así como los pasos a seguir.
+  <br>
+  <br>
+  Elige una receta:
+</p>
+<div style="padding: 10px; float: right; text-align: center; margin: 200px 300px 100px 0">
+  <button onclick="siguienteReceta(); siguienteTexto(); siguienteEnlace()"
+          class="butSiguiente">SIGUIENTE RECETA
+  </button>
+</div>
+<div style="padding: 10px; float: left; text-align: center; margin: 200px 0 100px 300px">
+  <button onclick="anteriorReceta(); anteriorTexto(); anteriorEnlace()"
+          class="butSiguiente">ANTERIOR RECETA
+  </button>
+</div>
+<div style="padding: 10px; text-align: center; margin: 0 0 0 450px">
+  <a href="PaellaValenciana.html" id="enlace"><img src="img/paella.jpg"
+                                                   alt="Paella valenciana"
+                                                   height="400"
+                                                   width="532"
+                                                   id="imagen"></a>
+  <p style="text-align: center; margin: 50px 500px 50px 50px" id="descripcion">
+    <ins><strong>Paella Valenciana</strong></ins>
+    <br>
+    Receta clásica de Paella Valenciana. Fruto de gran controversia por los ingredientes que debe o no debe
+    llevar, aquí tienes una versión fiel a la tradición de Valencia.
+  </p>
+</div>
+<hr>
+<p style="margin: 50px 1275px 50px 50px">Creador de la página web: Martín Veiga Álvarez</p>
+</body>
+</html>

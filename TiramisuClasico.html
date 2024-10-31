@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tiramisú clásico</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    let texto = 1;
+
+    function siguientePaso() {
+      const textElement = document.getElementById("pasos");
+      if (texto === 1) {
+        textElement.innerHTML = "<li><strong>Preparar la crema:</strong> Separa las yemas de las claras. Bate las yemas con el azúcar hasta obtener una mezcla espumosa. Añade el queso mascarpone y mezcla suavemente.</li>\n" +
+          "  <li><strong>Montar las claras:</strong> Bate las claras a punto de nieve e incorpóralas con movimientos envolventes a la crema de mascarpone.</li>";
+        texto = 2;
+      } else if (texto === 2) {
+        textElement.innerHTML = "  <li><strong>Preparar la crema:</strong> Separa las yemas de las claras. Bate las yemas con el azúcar hasta obtener una mezcla espumosa. Añade el queso mascarpone y mezcla suavemente.</li>\n" +
+          "  <li><strong>Montar las claras:</strong> Bate las claras a punto de nieve e incorpóralas con movimientos envolventes a la crema de mascarpone.</li>\n" +
+          "  <li><strong>Montar el tiramisú:</strong> Mezcla el café con el Amaretto. Moja los bizcochos en la mezcla y colócalos en la base de un molde. Cubre con una capa de crema de mascarpone. Repite hasta terminar con una capa de crema.</li>";
+        texto = 3;
+      } else if (texto === 3) {
+        textElement.innerHTML = "<li><strong>Preparar la crema:</strong> Separa las yemas de las claras. Bate las yemas con el azúcar hasta obtener una mezcla espumosa. Añade el queso mascarpone y mezcla suavemente.</li>\n" +
+          "  <li><strong>Montar las claras:</strong> Bate las claras a punto de nieve e incorpóralas con movimientos envolventes a la crema de mascarpone.</li>\n" +
+          "  <li><strong>Montar el tiramisú:</strong> Mezcla el café con el Amaretto. Moja los bizcochos en la mezcla y colócalos en la base de un molde. Cubre con una capa de crema de mascarpone. Repite hasta terminar con una capa de crema.</li>\n" +
+          "  <li><strong>Refrigerar:</strong> Deja el tiramisú en la nevera durante al menos 4 horas. Antes de servir, espolvorea con cacao en polvo.\n" +
+          "<strong>¡Listo para disfrutar!</strong></li>";
+        texto = 4;
+      }
+    }
+
+    function ultimoPaso() {
+      const textElement = document.getElementById("div");
+      if (texto === 4) {
+        textElement.remove(".butPaso");
+      }
+    }
+
+    function ultimoPaso2() {
+      const imgElement = document.getElementById("imagen1")
+      if (texto === 4) {
+        imgElement.height = "600";
+        imgElement.width = "800";
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-image: url("img/Fondo utensilios.jpg");
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="font-size:300%;background-color:hsl(300, 76%, 88%);text-align: center; border: solid black 10px;
+font-family: Oswald,fantasy; padding:50px; margin: 50px 400px 0 400px; color:black; border-radius: 50px">
+  <strong>Tiramisú clásico</strong></h1>
+<div style="padding: 10px; float: right; text-align: right; margin: 50px 250px 0px 0px">
+  <img alt="Ingredientes"
+       src="img/ingredientesPostre.jpg"
+       width="734.4" height="489.6"></div>
+<p style="margin: 50px 1650px 0 50px">
+  Ingredientes:
+</p>
+<ul>
+  <li>500 g de queso mascarpone</li>
+  <li>4 huevos</li>
+  <li>100 g de azúcar</li>
+  <li>200 g de bizcochos de soletilla</li>
+  <li>1 taza de café fuerte</li>
+  <li>50 ml de licor Amaretto</li>
+  <li>Cacao en polvo</li>
+</ul>
+<p style="margin: 200px 1650px 0 50px">
+  Preparación:
+</p>
+<ol id="pasos">
+  <li><strong>Preparar la crema:</strong> Separa las yemas de las claras. Bate las yemas con el azúcar hasta obtener una mezcla espumosa. Añade el queso mascarpone y mezcla suavemente.
+  </li>
+</ol>
+
+<div style="text-align: center; margin: 50px 790px 50px 790px;
+padding: 0 0 10px 0;" id="div">
+  <button onclick="siguientePaso(); ultimoPaso(); ultimoPaso2()" class="butPaso">SIGUIENTE PASO</button>
+</div>
+<div style="text-align: center; margin: 50px 790px 50px 550px;
+padding: 0 0 10px 0;">
+  <img src="img/tiramisú.jpg"
+       alt="Tiramisú clásico"
+       style="border-radius: 400px"
+       height="0"
+       width="0"
+       id="imagen1">
+</div>
+<div style="text-align: left; margin: 50px; padding: 10px">
+  <button onclick="document.location='index.html'" class="butSiguiente">VOLVER</button>
+</div>
+<hr>
+<p style="margin: 50px 1275px 50px 50px">Creador de la página web: Martín Veiga Álvarez</p>
+</body>
+</html>
+
